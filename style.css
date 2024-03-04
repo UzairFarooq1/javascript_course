@@ -1,0 +1,26 @@
+#counter{
+    font-size: 10rem;
+    text-align: center;
+}
+
+.btndiv{
+    text-align: center;
+}
+
+button{
+    background-color:darkturquoise;
+    height: 10dvh;
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 2em;
+    color: black;
+    margin-right: 2% ;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-in-out;
+     &:hover {
+        transform: scale(1.1);
+        background-color: turquoise;
+      }
+
+}
