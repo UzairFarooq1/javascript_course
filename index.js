@@ -117,3 +117,9 @@ document.getElementById('minus').onclick = function () {
 
 
 //Random number generator
+document.getElementById('random').onclick = function(){
+    number = Number(document.getElementById( 'randnum' ).value)
+    number = Math.floor(Math.random() * 100) + 1;
+    
+    document.getElementById( 'randnum' ).textContent= number;
+}
