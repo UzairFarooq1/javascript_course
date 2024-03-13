@@ -144,6 +144,38 @@ document.getElementById('mySubmit').onclick = function(){
 }
 
  
+const subscribe = document.getElementById('subscribe')
+const visa = document.getElementById('visa')
+const mastercard = document.getElementById('mastercard')
+const paypal = document.getElementById('paypal')
+const isSubscribed = document.getElementById('isSubscribed')
+const payment = document.getElementById('payment')
+
+document.getElementById('submit').onclick  = function () {
+    if (subscribe.checked) {
+        isSubscribed.textContent = `You are subscribed`;
+        payment.style.display='block'; 
+
+    } else{
+        isSubscribed.textContent = `You are not subscribed`
+    }
+    if (visa.checked) {
+        payment.textContent = `Payment method: Visa`
+        
+    }else if (mastercard.checked) {
+        payment.textContent = ` Payment method: MasterCard`
+    }
+    else if (paypal.checked) {
+        payment.textContent = `Payment method: Paypal`
+    }
+    else {
+        payment.textContent = `Please select a method of payment`
+
+    }
+}
+
+
+
 
 
 //IF statement
