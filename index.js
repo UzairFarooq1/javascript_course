@@ -152,13 +152,16 @@ const isSubscribed = document.getElementById('isSubscribed')
 const payment = document.getElementById('payment')
 
 document.getElementById('submit').onclick  = function () {
-    if (subscribe.checked) {
-        isSubscribed.textContent = `You are subscribed`;
-        payment.style.display='block'; 
+    // if (subscribe.checked) {
+    //     isSubscribed.textContent = `You are subscribed`;
+    //     payment.style.display='block'; 
 
-    } else{
-        isSubscribed.textContent = `You are not subscribed`
-    }
+    // } else{
+    //     isSubscribed.textContent = `You are not subscribed`
+    // }
+
+    subscribe.checked ? isSubscribed.textContent = `You are subscribed` : isSubscribed.textContent = `You are not subscribed`;
+
     if (visa.checked) {
         payment.textContent = `Payment method: Visa`
         
