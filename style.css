@@ -10,12 +10,10 @@
 
 button{
     background-color:darkturquoise;
-    height: 10dvh;
-    width: 300px;
-    padding: 10px 20px;
-    font-size: 2em;
+    height: 5dvh;
+    width: 100px;
+    font-size: 18px;
     color: black;
-    margin-right: 2% ;
     cursor: pointer;
     outline: none;
     transition: all .4s ease-in-out;
@@ -24,4 +22,12 @@ button{
         background-color: turquoise;
       }
 
+}
+
+.ifStatement{
+    margin-top: 200px;
+    text-align: center;
+}
+input{
+    
 }

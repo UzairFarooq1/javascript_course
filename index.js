@@ -81,19 +81,19 @@
 // Choose the property that best suits your specific use case to ensure correct behavior and security.
 
 
-document.getElementById('add').onclick = function(){
-    let counter = Number(document.getElementById('counter').textContent);
-    counter += 1 ;
-    document.getElementById('counter').textContent = counter;
-}
+// document.getElementById('add').onclick = function(){
+//     let counter = Number(document.getElementById('counter').textContent);
+//     counter += 1 ;
+//     document.getElementById('counter').textContent = counter;
+// }
 
-document.getElementById('reset').onclick = function(){
-    document.getElementById('counter').textContent = '0';
-}
-document.getElementById('minus').onclick = function () {
-    let counterValue = parseInt(document.getElementById('counter').innerText) - 1
-    document.getElementById('counter').innerHTML = counterValue
-}
+// document.getElementById('reset').onclick = function(){
+//     document.getElementById('counter').textContent = '0';
+// }
+// document.getElementById('minus').onclick = function () {
+//     let counterValue = parseInt(document.getElementById('counter').innerText) - 1
+//     document.getElementById('counter').innerHTML = counterValue
+// }
 
 
 
@@ -117,9 +117,33 @@ document.getElementById('minus').onclick = function () {
 
 
 //Random number generator
-document.getElementById('random').onclick = function(){
-    number = Number(document.getElementById( 'randnum' ).value)
-    number = Math.floor(Math.random() * 100) + 1;
+// document.getElementById('random').onclick = function(){
+//     number = Number(document.getElementById( 'randnum' ).value)
+//     number = Math.floor(Math.random() * 100) + 1;
     
-    document.getElementById( 'randnum' ).textContent= number;
+//     document.getElementById( 'randnum' ).textContent= number;
+// }
+
+document.getElementById('mySubmit').onclick = function(){
+    age = Number(document.getElementById('age').value)
+    output = document.getElementById('outputLabel')
+
+    if(age === 0){
+        output.textContent= `Please enter your correct age, you can not be ${age} year old`
+    }
+    else if (age >= 18) {
+        output.textContent = `You are an adult`
+    }
+    else if (age < 18){
+        output.textContent= `Your age is ${age}, you are a  minor`
+    }
+
+    else{
+        output.textContent = `Please enter a valid number`
+    }
 }
+
+ 
+
+
+//IF statement
