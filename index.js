@@ -176,9 +176,87 @@ document.getElementById('submit').onclick  = function () {
 
     }
 }
+//     day = document.getElementById('day').value;
+//     label = document.getElementById('daylabel');
 
+//     document.getElementById('checkDay').onclick = function(){
+//     switch(day){
+//         case day == 1:
+//             label.textContent="Monday"
+//             break;
+//         case 2:
+//             label.textContent="Tuesday"
+//             break;
+//         case 3:
+//             label.textContent="Wednesday";
+//             break;
+//         case 4:
+//             label.textContent="Thursday";
+//             break;
+//         case 5:
+//             label.textContent = "Friday";
+//             break;
+//         case 6:
+//             label.textContent = "Saturday";
+//             break;
+//         case 7:
+//             label.textContent = "Sunday";
+//             break;
+//         default:
+//             label.textContent = "It is not a day"
 
+//     }
+// }
 
+//string methods
+let username = "Uzair"
+console.log(`Username length ${username.length}`); // Outputs -> Username length 
+let lowerCaseUserName = username.toLowerCase();
+console.log(`Lowercase user name ${lowerCaseUserName}`); // Outputs -> Lowercase user name uzair
+let upperCaseUserName = username.toUpperCase()
+console.log(`Uppercase user name ${upperCaseUserName}`) // Outputs -> Uppercase user name UZAIR
+let indexOfu = username.indexOf("a");
+if (indexOfu != -1) {
+    console.log(`The first appearance of 'a' in the username is at position ${indexOfu}`)
+} else {
+    console.log("There is no 'a' in the username")
+}
+console.log(username.lastIndexOf("i") + 1);
+console.log(username.charAt(0)); //Outputs -> U
+let str = `Hello \n World`
+console.log(str);
+console.log(str.replace("\n", " ")) //Replaces "\n" with space
 
+/*String trim method removes any leading and trailing white spaces from a string*/
+console.log(str.trim()); //Outputs -> Hello World
+console.log(username.repeat(5))
+if (username.startsWith("U") && username.endsWith("r")) {
+    console.log("The username starts with U and ends with r" )
+    } else {
+        console.log("The username does not start with u")
+}
+if (username.includes("a")) {
+    console.log("The username includes the letter a")
+} else {
+    console.log("The username does not include the letter a")
+}
 
-//IF statement
+console.log(username.split('')); //Converts all characters into an array
+console.log(username.split('',2)); //Splits the string until it reaches the second argument, here empty so it will
+console.log(username.split(" ")); //Same as above
+let words = "This is a test for split method";
+console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split","method"]
+console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split" ,"method"]
+console.log(words.replaceAll(" ","-")) //Replace every single space with "-".</s>
+console.log(username.padStart(6,"_")); // Add "_" before username if its length less than 6
+console.log(username.padEnd(8, "*")); //Add "*" after username if its length is less than 8
+
+var fullName=prompt("Please  enter your Full Name","John Doe");
+// var fullName="John Doe";
+var initials=fullName.slice(0,1)+fullName.slice(fullName.lastIndexOf(" ") + 1)
+alert("Welcome "+fullName+"! Your Full Name has "+fullName.length +" letters and Initials are "+initials+ ".") ;
+
+/*Substring Method returns part of a  string between the startIndex and endIndex parameters */
+console.log("Your Initial are : "+initials);
+
+///=== checks if values are equal and if their datatypes are also equal
