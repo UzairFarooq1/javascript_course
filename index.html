@@ -28,7 +28,7 @@
     <br>
     <br> -->
 
-    <div  class="ifStatement">
+    <!-- <div  class="ifStatement">
         <input type="text" id="age">
         <br>
         <br>
@@ -65,11 +65,27 @@
         <label for="" id="daylabel"></label>
         <br>
         <button id="checkDay">Check Day</button>
-    </div>
+    </div> -->
 
-
-
-
+    <!-- Temperature convertor -->
+    <h1>Temperature Converter</h1>
+    <hr>
+    
+    <form onsubmit="return false;" id="tempForm">
+        <div class="container">
+            <label for="celsiusInput">
+                Temperature Input:
+            </label>
+            <input type="number" id="tempInput"/><br/>
+            <input type="radio" name="convertTo" id="toFahrenheit"> Celsius to Fahrenheit
+            <br>
+            <input type="radio" name="convertTo" id="toCelsius"> Fahrenheit to Celsius
+            <br>
+            <br>
+            <button type="submit" id="convertButton">Convert!</button>
+            <p id="result"></p>
+        </div>
+    </form>
 
     <script src="index.js"></script>
 

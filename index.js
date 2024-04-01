@@ -124,24 +124,24 @@
 //     document.getElementById( 'randnum' ).textContent= number;
 // }
 
-document.getElementById('mySubmit').onclick = function(){
-    age = Number(document.getElementById('age').value)
-    output = document.getElementById('outputLabel')
+// document.getElementById('mySubmit').onclick = function(){
+//     age = Number(document.getElementById('age').value)
+//     output = document.getElementById('outputLabel')
 
-    if(age === 0){
-        output.textContent= `Please enter your correct age, you can not be ${age} year old`
-    }
-    else if (age >= 18) {
-        output.textContent = `You are an adult`
-    }
-    else if (age < 18){
-        output.textContent= `Your age is ${age}, you are a  minor`
-    }
+//     if(age === 0){
+//         output.textContent= `Please enter your correct age, you can not be ${age} year old`
+//     }
+//     else if (age >= 18) {
+//         output.textContent = `You are an adult`
+//     }
+//     else if (age < 18){
+//         output.textContent= `Your age is ${age}, you are a  minor`
+//     }
 
-    else{
-        output.textContent = `Please enter a valid number`
-    }
-}
+//     else{
+//         output.textContent = `Please enter a valid number`
+//     }
+// }
 
  
 const subscribe = document.getElementById('subscribe')
@@ -151,31 +151,31 @@ const paypal = document.getElementById('paypal')
 const isSubscribed = document.getElementById('isSubscribed')
 const payment = document.getElementById('payment')
 
-document.getElementById('submit').onclick  = function () {
-    // if (subscribe.checked) {
-    //     isSubscribed.textContent = `You are subscribed`;
-    //     payment.style.display='block'; 
+// document.getElementById('submit').onclick  = function () {
+//     // if (subscribe.checked) {
+//     //     isSubscribed.textContent = `You are subscribed`;
+//     //     payment.style.display='block'; 
 
-    // } else{
-    //     isSubscribed.textContent = `You are not subscribed`
-    // }
+//     // } else{
+//     //     isSubscribed.textContent = `You are not subscribed`
+//     // }
 
-    subscribe.checked ? isSubscribed.textContent = `You are subscribed` : isSubscribed.textContent = `You are not subscribed`;
+//     subscribe.checked ? isSubscribed.textContent = `You are subscribed` : isSubscribed.textContent = `You are not subscribed`;
 
-    if (visa.checked) {
-        payment.textContent = `Payment method: Visa`
+//     if (visa.checked) {
+//         payment.textContent = `Payment method: Visa`
         
-    }else if (mastercard.checked) {
-        payment.textContent = ` Payment method: MasterCard`
-    }
-    else if (paypal.checked) {
-        payment.textContent = `Payment method: Paypal`
-    }
-    else {
-        payment.textContent = `Please select a method of payment`
+//     }else if (mastercard.checked) {
+//         payment.textContent = ` Payment method: MasterCard`
+//     }
+//     else if (paypal.checked) {
+//         payment.textContent = `Payment method: Paypal`
+//     }
+//     else {
+//         payment.textContent = `Please select a method of payment`
 
-    }
-}
+//     }
+// }
 //     day = document.getElementById('day').value;
 //     label = document.getElementById('daylabel');
 
@@ -209,54 +209,202 @@ document.getElementById('submit').onclick  = function () {
 // }
 
 //string methods
-let username = "Uzair"
-console.log(`Username length ${username.length}`); // Outputs -> Username length 
-let lowerCaseUserName = username.toLowerCase();
-console.log(`Lowercase user name ${lowerCaseUserName}`); // Outputs -> Lowercase user name uzair
-let upperCaseUserName = username.toUpperCase()
-console.log(`Uppercase user name ${upperCaseUserName}`) // Outputs -> Uppercase user name UZAIR
-let indexOfu = username.indexOf("a");
-if (indexOfu != -1) {
-    console.log(`The first appearance of 'a' in the username is at position ${indexOfu}`)
-} else {
-    console.log("There is no 'a' in the username")
-}
-console.log(username.lastIndexOf("i") + 1);
-console.log(username.charAt(0)); //Outputs -> U
-let str = `Hello \n World`
-console.log(str);
-console.log(str.replace("\n", " ")) //Replaces "\n" with space
+// let username = "Uzair"
+// console.log(`Username length ${username.length}`); // Outputs -> Username length 
+// let lowerCaseUserName = username.toLowerCase();
+// console.log(`Lowercase user name ${lowerCaseUserName}`); // Outputs -> Lowercase user name uzair
+// let upperCaseUserName = username.toUpperCase()
+// console.log(`Uppercase user name ${upperCaseUserName}`) // Outputs -> Uppercase user name UZAIR
+// let indexOfu = username.indexOf("a");
+// if (indexOfu != -1) {
+//     console.log(`The first appearance of 'a' in the username is at position ${indexOfu}`)
+// } else {
+//     console.log("There is no 'a' in the username")
+// }
+// console.log(username.lastIndexOf("i") + 1);
+// console.log(username.charAt(0)); //Outputs -> U
+// let str = `Hello \n World`
+// console.log(str);
+// console.log(str.replace("\n", " ")) //Replaces "\n" with space
 
-/*String trim method removes any leading and trailing white spaces from a string*/
-console.log(str.trim()); //Outputs -> Hello World
-console.log(username.repeat(5))
-if (username.startsWith("U") && username.endsWith("r")) {
-    console.log("The username starts with U and ends with r" )
-    } else {
-        console.log("The username does not start with u")
-}
-if (username.includes("a")) {
-    console.log("The username includes the letter a")
-} else {
-    console.log("The username does not include the letter a")
-}
+// /*String trim method removes any leading and trailing white spaces from a string*/
+// console.log(str.trim()); //Outputs -> Hello World
+// console.log(username.repeat(5))
+// if (username.startsWith("U") && username.endsWith("r")) {
+//     console.log("The username starts with U and ends with r" )
+//     } else {
+//         console.log("The username does not start with u")
+// }
+// if (username.includes("a")) {
+//     console.log("The username includes the letter a")
+// } else {
+//     console.log("The username does not include the letter a")
+// }
 
-console.log(username.split('')); //Converts all characters into an array
-console.log(username.split('',2)); //Splits the string until it reaches the second argument, here empty so it will
-console.log(username.split(" ")); //Same as above
-let words = "This is a test for split method";
-console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split","method"]
-console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split" ,"method"]
-console.log(words.replaceAll(" ","-")) //Replace every single space with "-".</s>
-console.log(username.padStart(6,"_")); // Add "_" before username if its length less than 6
-console.log(username.padEnd(8, "*")); //Add "*" after username if its length is less than 8
+// console.log(username.split('')); //Converts all characters into an array
+// console.log(username.split('',2)); //Splits the string until it reaches the second argument, here empty so it will
+// console.log(username.split(" ")); //Same as above
+// let words = "This is a test for split method";
+// console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split","method"]
+// console.log(words.split(" ")); //splits by whitespace, outputs ["This","is","a","test","for","split" ,"method"]
+// console.log(words.replaceAll(" ","-")) //Replace every single space with "-".</s>
+// console.log(username.padStart(6,"_")); // Add "_" before username if its length less than 6
+// console.log(username.padEnd(8, "*")); //Add "*" after username if its length is less than 8
 
-var fullName=prompt("Please  enter your Full Name","John Doe");
-// var fullName="John Doe";
-var initials=fullName.slice(0,1)+fullName.slice(fullName.lastIndexOf(" ") + 1)
-alert("Welcome "+fullName+"! Your Full Name has "+fullName.length +" letters and Initials are "+initials+ ".") ;
+// var fullName=prompt("Please  enter your Full Name","John Doe");
+// // var fullName="John Doe";
+// var initials=fullName.slice(0,1)+fullName.slice(fullName.lastIndexOf(" ") + 1)
+// alert("Welcome "+fullName+"! Your Full Name has "+fullName.length +" letters and Initials are "+initials+ ".") ;
 
-/*Substring Method returns part of a  string between the startIndex and endIndex parameters */
-console.log("Your Initial are : "+initials);
+// /*Substring Method returns part of a  string between the startIndex and endIndex parameters */
+// console.log("Your Initial are : "+initials);
 
 ///=== checks if values are equal and if their datatypes are also equal
+
+
+///Number Guessing Game
+// let maxNum = 100
+// let minNum = 1
+// let answer=Math.floor(Math.random()  * (maxNum - minNum + 1) + minNum);
+// console.log("Answer is: ",answer)
+// let running = true
+// console.log(`I am thinking of a number between ${minNum} to ${maxNum}. Please guess it`)
+// let guessCount=0;
+// let userGuess;
+// while(running){
+//     userGuess=parseInt(prompt(`Enter Your Number between ${maxNum} and ${minNum} :`));
+//     console.log(typeof(userGuess) );
+//     if (isNaN(userGuess)) {
+//         alert ("Invalid Input! Enter a valid Number")
+//     }
+//     else if (userGuess < minNum || userGuess>maxNum) {
+//         alert (`Out Of Range ! The Number Should be Between ${maxNum} And ${minNum}`)
+//     }
+//         else{
+//         guessCount++;
+//         if(userGuess >answer ){
+//             alert ('Too High')
+//         }
+//         else if (userGuess < answer) {
+//             alert ('Too Low');
+//         }
+//         else {
+//             alert(`Congrats You Won! The number is ${answer} in ${guessCount} Attempts`);
+//             running = false
+//         }
+//     }
+// }
+
+//Temprature convertor
+let tempInput = document.getElementById("tempInput");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelsius = document.getElementById("toCelsius");
+const result = document.getElementById("result");
+let temp
+
+document.getElementById("convertButton").onclick = function () {
+    if (toFahrenheit.checked) {
+        temp = Number(tempInput.value)
+        temp = ((temp * (9/5)) +32);
+        temp = temp.toFixed(1)
+        result.innerHTML = `The Temperature In Fahrenheit is ${temp}°F`;  
+    } else if (toCelsius.checked) {
+        temp = Number(tempInput.value)
+        temp = ((temp - 32) * 5 / 9);
+        temp = temp.toFixed(1)
+        result.innerHTML =`The Temperature In Celcius Is ${temp}°C`;    
+    } else {
+        alert('Please Select A Option To Continue');
+    }
+};
+
+
+//Arrays
+//.push("") adds item to the end
+//.pop() removes last item in array
+//.unshift(item) add an item to the beginning of the array and shifts other elements upwards
+//.shift() remove first item from array
+//.splice(start, deleteCount, item1, ....., itemN) starts at start index and deletes deleteCount items and inserts item1,..,item N and shift other items downward
+//.length  gives you how many items are in the array
+//.indexOf("item")  returns position of that item or -1 if it's not there
+//.lastIndexOf("item") same as indexof but for the last occurrence of the item
+//.includes("item") return true or false whether the array contains "item" or not
+//.join(", ") joins all items with a comma and space
+//.sort().reverse()  sorts the array in ascending order then reverses it
+// fruits arrays
+// let fruits = ["Apple", "Banana", "Orange"];
+// for (let i = 0; i < fruits.length; i+=2) {
+//     const element = fruits[i];
+//     console.log(element);   
+// }
+
+// for (let fruit of fruits ){
+//     console.log(fruit);
+// }
+
+//spread operators = allows an iterable such as an array or string to be expanded into seperate elements
+const arr1 = [1, 2 ,3]
+const arr2 = [4, 5, 6]
+console.log([...arr1, ...arr2]) // [1, 2, 3, 4, 5,  6]
+console.log(Math.max(...arr2))
+console.log(...arr2);
+
+// destructuring 
+const person ={
+    name: 'John',
+    age: 30,
+    country: 'USA'
+}
+
+const {name,age}=person;
+console.log(name,age) // John 30
+
+const hobby={
+    name:'coding',
+    tools:['laptop','monitor','mouse']
+}
+
+const {name:n,tools:t}=hobby;
+console.log(n, t) // coding ['laptop','monitor','mouse']
+
+//rest parameters
+function getNum(...numbers){///rest = joins  all arguments together into one variable
+    console.log(...numbers);///spread = seperates out each argument and logs them individually
+    return (numbers)
+}
+const num1 = 5
+const num2 = 8
+const num3 = 10
+const num4 = 2
+const num5 = 1
+
+const myNumbers = getNum(num1,num2,num3,num4,num5); // ["5", "8", "10", "2", "1"]
+console.log(myNumbers)
+
+function sum(...numbers) {
+    let total=0
+    for(let number of numbers) {
+        total += number;
+    }
+    return total
+}
+function average(...numbers) {
+    let total=0
+    for(let number of numbers) {
+        total += number;
+    }
+    return total/numbers.length
+}
+const myResult = sum(num1,num2,num3,num4,num5);
+const myAverage = average(num1,num2,num3,num4,num5);
+console.log("The result is "+myResult+". The average is "+myAverage+".");
+console.log(average(0,1,2,3,4,5,6,7,8,9)); //getting average  of 10 numbers input manually.
+console.log(myResult) // 26
+
+function combineStrings(...strings) {
+    return strings.join(" ")
+}
+const str1="Hello"
+const str2="World!"
+const combinedStr = combineStrings(str1,str2,"How","you","doing?");
+console.log(combinedStr)
