@@ -296,27 +296,27 @@ const payment = document.getElementById('payment')
 // }
 
 //Temprature convertor
-let tempInput = document.getElementById("tempInput");
-const toFahrenheit = document.getElementById("toFahrenheit");
-const toCelsius = document.getElementById("toCelsius");
-const result = document.getElementById("result");
-let temp
+// let tempInput = document.getElementById("tempInput");
+// const toFahrenheit = document.getElementById("toFahrenheit");
+// const toCelsius = document.getElementById("toCelsius");
+// const result = document.getElementById("result");
+// let temp
 
-document.getElementById("convertButton").onclick = function () {
-    if (toFahrenheit.checked) {
-        temp = Number(tempInput.value)
-        temp = ((temp * (9/5)) +32);
-        temp = temp.toFixed(1)
-        result.innerHTML = `The Temperature In Fahrenheit is ${temp}°F`;  
-    } else if (toCelsius.checked) {
-        temp = Number(tempInput.value)
-        temp = ((temp - 32) * 5 / 9);
-        temp = temp.toFixed(1)
-        result.innerHTML =`The Temperature In Celcius Is ${temp}°C`;    
-    } else {
-        alert('Please Select A Option To Continue');
-    }
-};
+// document.getElementById("convertButton").onclick = function () {
+//     if (toFahrenheit.checked) {
+//         temp = Number(tempInput.value)
+//         temp = ((temp * (9/5)) +32);
+//         temp = temp.toFixed(1)
+//         result.innerHTML = `The Temperature In Fahrenheit is ${temp}°F`;  
+//     } else if (toCelsius.checked) {
+//         temp = Number(tempInput.value)
+//         temp = ((temp - 32) * 5 / 9);
+//         temp = temp.toFixed(1)
+//         result.innerHTML =`The Temperature In Celcius Is ${temp}°C`;    
+//     } else {
+//         alert('Please Select A Option To Continue');
+//     }
+// };
 
 
 //Arrays
@@ -408,3 +408,22 @@ const str1="Hello"
 const str2="World!"
 const combinedStr = combineStrings(str1,str2,"How","you","doing?");
 console.log(combinedStr)
+
+
+//Dice roller
+function rollDice() {
+    const diceNum = document.getElementById("diceNum").value
+    const diceResult = document.getElementById("diceResult")
+    const diceImages = document.getElementById("diceImages")
+    let values= []
+    let images =[]
+
+    for (let i = 0; i < diceNum; i++) {
+        value = Math.floor(Math.random()*6)+1
+        values.push(value);
+        images.push(`<img src= "dice_images/${value}.png">`)  
+        console.log(values);      
+    }
+    diceResult.innerHTML =  `Roll: ${values.join(", ")}`
+    diceImages.innerHTML = `${images.join("")}`
+}
