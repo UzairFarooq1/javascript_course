@@ -427,3 +427,57 @@ function rollDice() {
     diceResult.innerHTML =  `Roll: ${values.join(", ")}`
     diceImages.innerHTML = `${images.join("")}`
 }
+
+
+/// Random Password Generator
+
+function randomPasswordGenerator(length, includelowercase,includeuppercase,includenumbers,includespecialcharacters) {
+    const  upperCaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
+    const numbers = '0123456789'
+    const specialCharacters =  '!@#$%^&*()_+=-?'
+
+    let allowedChars = "";
+    let password ="";
+
+    allowedChars += includelowercase ? lowerCaseLetters : ""
+    allowedChars += includeuppercase ? upperCaseLetters : ""
+    allowedChars += includenumbers ? numbers : ""
+    allowedChars += includespecialcharacters ? specialCharacters : ""
+
+    if (length <= 0) {
+        return("Password length can not be 0");
+    }
+    if (allowedChars.length === 0) {
+        return("At least one requirement should be met");
+    }
+
+    for (let i = 0; i < length; i++) {
+        const randIndex = Math.floor(Math.random() * allowedChars.length)  
+        password += allowedChars[randIndex]      
+    }
+    return password;
+}
+
+const passwordlength = 12;
+const includelowercase = true;
+const includeuppercase = false;
+const includenumbers = true;
+const includespecialcharacters = false;
+
+const password = randomPasswordGenerator(
+                                        passwordlength, 
+                                        includelowercase,
+                                        includeuppercase,
+                                        includenumbers,
+                                        includespecialcharacters)
+console.log(password);
+
+
+document.getElementById("randPassword").innerHTML = `Generated Password is: ${password}`
+
+
+///callback function = A function passed as an argument to another function.
+/// used to handle asynchronous operations: 1. Reading a file, 2. Network Requests, 3. Interacting with DB
+
+
