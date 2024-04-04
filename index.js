@@ -480,4 +480,15 @@ document.getElementById("randPassword").innerHTML = `Generated Password is: ${pa
 ///callback function = A function passed as an argument to another function.
 /// used to handle asynchronous operations: 1. Reading a file, 2. Network Requests, 3. Interacting with DB
 
+function sum (callback,x,y){
+    let result= x + y;
+    callback(result);
+}
 
+function displayLog(result){
+    console.log(result);
+}
+
+sum(displayLog,5,7);
+
+//Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
