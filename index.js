@@ -480,7 +480,7 @@ document.getElementById("randPassword").innerHTML = `Generated Password is: ${pa
 ///callback function = A function passed as an argument to another function.
 /// used to handle asynchronous operations: 1. Reading a file, 2. Network Requests, 3. Interacting with DB
 
-function sum (callback,x,y){
+function mysum (callback,x,y){
     let result= x + y;
     callback(result);
 }
@@ -489,6 +489,45 @@ function displayLog(result){
     console.log(result);
 }
 
-sum(displayLog,5,7);
+mysum(displayLog,5,7);
+
+//foreach() method. Method used to iterate over elements of an array and apply specified function(callback) to each element
+//arr.forEach(callback)
+let arr=[10,20,30];
+arr.forEach((value)=>{
+   console.log(value*2);
+});
+
+arr.forEach(power);
+arr.forEach(display)
+
+function power(element, index, array) {
+    array[index] = Math.pow(element, 2);
+}
+
+function display(element) {
+    console.log(element);
+}
+
+let fruits = ['apple', 'banana', 'cherry','banana'];
+
+fruits.forEach(capitalize)
+fruits.forEach(display);
+
+function Uppercase(element, index, array) {
+    array[index] = element.toUpperCase();
+}
+
+function capitalize(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1)
+}
+
+function display(element) {
+    console.log(element);
+}
+
+
+
+
 
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
