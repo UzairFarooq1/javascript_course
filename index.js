@@ -560,8 +560,22 @@ dates = dates.map(formatedDates)
 console.log(dates)
 
 
+///.filter() method  creates a new array with all elements that pass the test implemented by the provided function.
+let  numStr = ["1","2","3","4","5","6"];
 
+function isEven(element) {
+    return element % 2 ===0;
+}
+const evenNums = numStr.filter(isEven);
+console.log(evenNums);
 
+let myAge = ['25','8','15','30','50','18','28','33']
+
+function validateAge(element) {
+    return element >=18;
+}
+adultAge = myAge.filter(validateAge)
+console.log(adultAge);
 
 
 
