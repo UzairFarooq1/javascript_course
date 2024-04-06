@@ -578,7 +578,26 @@ adultAge = myAge.filter(validateAge)
 console.log(adultAge);
 
 
+///.reduce(callbackfn[, initialValue]) reduces elements of an  array to a single value. The callbackfn is called for each element in the array.
+//challenge
+
+let arr5 = [1,2,3,4,5];
+
+function arr5Sum(accumulator, element) {
+    return  accumulator + element;
+}
+
+let resulSum = arr5.reduce(arr5Sum);
+console.log(resulSum.toFixed(2));
 
 
+let grades = ['70','90','50','60','85','93','78','35']
+
+function maxGrades(accumulator, element) {
+    return Math.max(accumulator, element);
+}
+
+let resultMaxGrade = grades.reduce(maxGrades);
+console.log(resultMaxGrade);
 
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
