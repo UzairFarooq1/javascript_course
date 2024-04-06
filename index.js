@@ -527,6 +527,43 @@ function display(element) {
 }
 
 
+///.map(callback[, thisArg]) = Accepts callback and applies  it on each element of the array. Returns a new Array with the results in the same order as/*
+
+let numbers = [4,9,2];
+console.log(numbers.map(Math.sqrt));
+
+function square(element) {
+    element = Math.pow(element,2);
+    return element;
+}
+
+const numberSquare = numbers.map(square)
+console.log(numberSquare);
+
+let words=['hello','world','js']
+
+const wordsUppercase = words.map(uppercase)
+console.log(wordsUppercase);
+
+function uppercase(element){
+   return element.toUpperCase()
+}
+
+
+let dates = ['2024-01-25','2024-02-28','2024-03-31'];
+
+function formatedDates(element) {
+    const date = element.split("-")
+    return `${date[2]}/${date[1]}/${date[0]}`
+}
+dates = dates.map(formatedDates)
+console.log(dates)
+
+
+
+
+
+
 
 
 
