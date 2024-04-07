@@ -605,10 +605,23 @@ console.log(resultMaxGrade);
 let expressionAdd= function (a , b){return a+b};
 console.log(expressionAdd(5,7))
 
-let arr6 = ['2', '4', '6','8'];
+let arr6 = ['2', '7','9', '6','8'];
 const squares = arr6.map(function (element) {
     return Math.pow(element, 2);
 })
 console.log(squares);
+
+
+///arrow function () => 
+
+const cube = arr6.map((element) => Math.pow(element, 3));
+console.log(cube);
+
+const isNumEven = arr6.filter((element) => element % 2 === 0 );
+console.log(isNumEven);
+
+const arr6sum = arr6.reduce((accumulator, element)=> accumulator +  parseInt(element), 0);
+console.log(arr6sum);
+
 
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
