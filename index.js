@@ -600,4 +600,15 @@ function maxGrades(accumulator, element) {
 let resultMaxGrade = grades.reduce(maxGrades);
 console.log(resultMaxGrade);
 
+
+///function expressions
+let expressionAdd= function (a , b){return a+b};
+console.log(expressionAdd(5,7))
+
+let arr6 = ['2', '4', '6','8'];
+const squares = arr6.map(function (element) {
+    return Math.pow(element, 2);
+})
+console.log(squares);
+
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
