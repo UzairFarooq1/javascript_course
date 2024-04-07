@@ -624,4 +624,36 @@ const arr6sum = arr6.reduce((accumulator, element)=> accumulator +  parseInt(ele
 console.log(arr6sum);
 
 
+// object  literal
+
+let person1 ={
+    name: 'Juan',
+    age:40,
+    country:'Argentina',
+    greatings : () => console.log("Hello, I am Juan")
+}
+
+let anotherPerson={
+    name :'María',
+    age:30,
+    hobbies:{
+        music:true,
+        painting:false,
+        swimming: true
+    }
+}
+
+console.log(`${person1.name} is ${person1.age} years old from ${person1.country}`);
+
+if('hobbies' in person1){
+   console.log (`${person1.name} likes ${Object.keys(person1.hobbies).join(',') }`);  
+}
+
+for (const key in person1.hobbies ) {
+     if(person1.hobbies[key]===true ){
+         console.log(`${person1.name} loves ${key}`);
+     }     
+}
+
+
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
