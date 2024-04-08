@@ -630,7 +630,7 @@ let person1 ={
     name: 'Juan',
     age:40,
     country:'Argentina',
-    greatings : () => console.log("Hello, I am Juan")
+    greetings : () => console.log(`${this.name} I am Juan`)
 }
 
 let anotherPerson={
@@ -644,6 +644,7 @@ let anotherPerson={
 }
 
 console.log(`${person1.name} is ${person1.age} years old from ${person1.country}`);
+console.log(person1.greetings());
 
 if('hobbies' in person1){
    console.log (`${person1.name} likes ${Object.keys(person1.hobbies).join(',') }`);  
@@ -654,6 +655,11 @@ for (const key in person1.hobbies ) {
          console.log(`${person1.name} loves ${key}`);
      }     
 }
+
+
+///this reference to the object where THIS  keyword was used
+
+
 
 
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
