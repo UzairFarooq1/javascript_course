@@ -625,12 +625,35 @@ console.log(arr6sum);
 
 
 // object  literal
+///this reference to the object where THIS  keyword was used
+///constructors  are special methods of creating objects in javascript
+
+
+
+
+let person2 ={
+    firstName: "John",
+    lastName : "Doe",
+    age :43,
+    email:"john@doe.com",
+    showInfo : function(){
+        console.log(`${this.firstName} ${this.lastName}, Age: ${this.age}`);
+    },
+    changeEmail : function() {
+       this.email="newmail@gmail.com";
+    }
+    
+};
+person2.showInfo();
+person2.changeEmail();
+console.log(person2.email);
+
 
 let person1 ={
     name: 'Juan',
     age:40,
     country:'Argentina',
-    greetings : () => console.log(`${this.name} I am Juan`)
+    greetings : () => {console.log(`${this.name} I am Juan`)}
 }
 
 let anotherPerson={
@@ -646,18 +669,25 @@ let anotherPerson={
 console.log(`${person1.name} is ${person1.age} years old from ${person1.country}`);
 console.log(person1.greetings());
 
-if('hobbies' in person1){
-   console.log (`${person1.name} likes ${Object.keys(person1.hobbies).join(',') }`);  
+//Constructor
+function car(name,model_year,mileage,color) {
+    this.name = name;
+    this.model_year = model_year;
+    this.mileage = mileage;
+    this.color = color
+    this.drive = () => {console.log(`You drive ${this.name} car which is a ${this.model_year} model`);}
 }
 
-for (const key in person1.hobbies ) {
-     if(person1.hobbies[key]===true ){
-         console.log(`${person1.name} loves ${key}`);
-     }     
-}
+const car1 = new car('RVR',2010,104000,'Grey')
+const car2= new car('Aventador S','2019', 50000,'Red')
+
+console.log(car1);
+car1.drive()
+console.log(car2);
+car2.drive()
 
 
-///this reference to the object where THIS  keyword was used
+
 
 
 
