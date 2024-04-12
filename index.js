@@ -688,6 +688,30 @@ car2.drive()
 
 
 
+//Classes provides a  more elegant way to create objects in JavaScript and also allows us to use inheritance
+class PersonaClass{
+    constructor (name, age, country, salary){
+        this.name = name;
+        this.age = age;
+        this.country = country;
+        this.salary = salary;
+    }
+    
+    greetings(){
+        return `Hello! My name is ${this.name}, I am ${this.age} years old and I come from ${this.country}.`;
+    }
+    income(vat){
+        return this.salary - (this.salary *   vat / 100);
+    }
+    }
+
+    const vat = 16;
+    const  person3 = new PersonaClass("Juan", 30, "Spain",  6000);
+    console.log(person3.greetings());
+    console.log(`My net salary is $${person3.income(vat).toFixed(2)}`)
+
+
+
 
 
 
