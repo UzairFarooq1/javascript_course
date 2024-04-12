@@ -710,6 +710,64 @@ class PersonaClass{
     console.log(person3.greetings());
     console.log(`My net salary is $${person3.income(vat).toFixed(2)}`)
 
+    //static keyword  can be used with methods or properties of a class but not with constructors. A static method belongs to the class itself
+    /*Exercise: Create a class for a book with properties title, author, year of publication and price. Include methods to display the number of books created*/
+
+    class book {
+
+        static bookCount = 0
+        constructor(title, author, year, price) {
+            this.title = title;
+            this.author = author;
+            this.year = year;
+            this.price = price;
+            book.bookCount++ ;
+        }
+
+        
+        displayBookInfo() {
+            return `${this.title} was written by ${this.author} in the year ${this.year}`;
+          }
+          
+          compareTo(otherBook) {
+            if (this.price < otherBook.price) {
+              return "cheaper";
+            } else if (this.price > otherBook.price) {
+              return "Expensive";
+            } else {
+              return 0;
+            }
+          }
+    }
+    let bookA = new book ("The Catcher in the Rye","J.D. Salinger",1951,14.99);
+    let bookB = new book ("Harry Potter and the Philosopher's Stone","Margaret Atwood",1997,29.99);
+    console.log(bookA.displayBookInfo())
+    console.log(bookB.displayBookInfo())
+    console.log(bookA.compareTo(bookB));
+    console.log(book.bookCount);
+    class  Employee extends PersonaClass{
+        constructor(name, age, country, salary, position) {
+            super(name, age, country, salary);
+            this.position = position;
+        }
+        workHours() {
+            if (this.position === 'Manager') {
+                return 'I usually work between 8:00 AM and 4:30 PM';
+            } else {
+               return 'I usually work between 9:00 AM and 5:00 PM'
+            }
+          }
+          drive () {
+              return `${super.greetings()} Also, I can drive.`;
+          }
+      }
+      
+      const employee1 = new Employee('Ana', 28, 'USA', 7500, 'Analyst');
+      console.log(employee1.drive())
+      console.log(employee1.workHours())
+
+
+
 
 
 
