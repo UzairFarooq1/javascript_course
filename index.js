@@ -766,6 +766,51 @@ class PersonaClass{
       console.log(employee1.drive())
       console.log(employee1.workHours())
 
+    //setters and getters 
+    class Car {
+        constructor(make, model, year){
+            this._make= make;
+            this._model= model;
+            this._year= year;
+        }
+    
+        set make(newMake) {
+           this._make = newMake;
+        }
+        
+        get make() {
+           return `This car is a ${this._make}`;
+        }
+    }
+
+    let myCar = new Car("Ford", "Mustang", 2005);
+    console.log(myCar.make);
+    myCar.make = "Toyota";
+    console.log(myCar.make);
+    //set can also be used to check  the input data type before assigning it to the variable
+    //getter makes a property readable while  setter allows you to control how/when the value of a property is assigned/Making it writable
+
+
+    //destructuring 
+    const person5={firstName:"John", lastName:"Doe", age:50};
+    const {firstName,lastName} =person5;
+    console.log(`${firstName} ${lastName}`)
+
+    //nested objects
+    const person6={
+        firstName:'Jane',
+        lastName:'Smith',
+        age:45,
+        address:{
+            streetAddress:'123 Main St',
+            city:'New York',
+            state:'NY'
+        },
+        hobbies:[ 'Reading','Writing','Coding']
+    };
+
+    console.log(`${person6.firstName} lives at ${person6.address.streetAddress}, ${person6.address.city}, ${person6.address.state}`)
+
 
 
 
