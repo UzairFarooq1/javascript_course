@@ -837,16 +837,32 @@ class PersonaClass{
     //Array of Objects 
     const people=[
         {name:"Alice",age:21},
-        {name:"Bob",age:35}
+        {name:"Bob",age:35},
+        {name:"Charlie",age:18}
       ];
       
       for(let key in people){
           let person=people[key];
           console.log(`${person.name} is ${person.age}`);
       }
+      //foreach
       people.forEach(person => {
         console.log(person.name);
       })
+      //.map
+      const names = people.map(person => person.name)
+      console.log(names);
+      //.filter
+      const olderThan18 = people.filter(person=>person.age>18)
+      console.log(olderThan18);
+      //.reduce
+      const sumOfAge = people.reduce((total,nextPerson)=>{return total+nextPerson.age},0)
+      console.log(sumOfAge);
+      
+      const maxAge = people.reduce( (maxSoFar, nextPerson) => 
+      nextPerson.age > maxSoFar.age ?                      
+      nextPerson: maxSoFar );
+      console.log(maxAge);
 
 
 
