@@ -812,11 +812,46 @@ class PersonaClass{
     console.log(`${person6.firstName} lives at ${person6.address.streetAddress}, ${person6.address.city}, ${person6.address.state}`)
 
 
+    class Person{
+        constructor (name, age, country, salary, ...address){
+            this.name = name;
+            this.age = age;
+            this.country = country;
+            this.salary = salary;
+            this.address = new Address(...address)
+        }
+    }
+    class  Address{
+        constructor(streetAddress,city,state){
+            this.streetAddress=streetAddress;
+            this.city=city;
+            this.state=state;
+            }
+    }
+
+    const  john = new Person('John Doe', 30, 'USA', 70000, '123 Oak Drive', 'New York', 'NY');
+    console.log (`Employee Name: ${john.name}, Age: ${john.age}, Country: ${john.country}, Salary: ${john.salary}, Address: ${john.address}`)
+    console.log(john.address);
+
+
+    //Array of Objects 
+    const people=[
+        {name:"Alice",age:21},
+        {name:"Bob",age:35}
+      ];
+      
+      for(let key in people){
+          let person=people[key];
+          console.log(`${person.name} is ${person.age}`);
+      }
+      people.forEach(person => {
+        console.log(person.name);
+      })
 
 
 
 
 
 
+//Promises are used when you want to do something asynchronously and then get the result of that operation once it's done
 
-//Promises are used when you want to do something asynchronously and then get the result of that operation once it's done.
