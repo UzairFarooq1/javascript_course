@@ -865,6 +865,43 @@ class PersonaClass{
       console.log(maxAge);
 
 
+      //.sort () method can be used on arrays to sort the elements. It takes a compare function as an argument that define
+      //.sort(a,b => b - a) or .sort((a, b) => a - b)
+      const sortByName = () => people.sort((a, b) => a.name.localeCompare(b.name));
+      sortByName();
+      const sortByAge = () => people.sort((a,b) => a.age-b.age)
+      sortByAge()
+      console.log(people);
+
+      //fish-yates algorithm (shuffling objects in array)
+      function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        
+        while (0 !== currentIndex) {
+    
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
+    };
+    function newShuffle(array) {
+        for (let i = array.length - 1 ; i > 0; i--) {
+            const random = Math.floor(Math.random ()*(i + 1));
+            [array[i],array[random]] = [array[random],array[i]]
+        }
+    }
+    let newPeople=JSON.parse(JSON.stringify(people))
+    shuffle(newPeople)
+    console.log("Shuffled People",newPeople)
+    newShuffle(newPeople)
+    console.log("New Shuffled People",newPeople)
+
+
+
 
 
 
