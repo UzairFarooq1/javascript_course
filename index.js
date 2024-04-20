@@ -901,6 +901,21 @@ class PersonaClass{
     console.log("New Shuffled People",newPeople)
 
 
+    //Date object
+    let date1 = new Date('2023/12/31');
+    let date2 = new Date('2024/01/01')
+    if (date2>date1) {
+        console.log("Happy New Year");
+    }
+    console.log(`Day of the Week: ${date1.getDay()}`)
+    console.log(`Month: ${date1.getMonth()}`)
+    console.log(`Year: ${date1.getFullYear()}`)
+    console.log(`Hours: ${date1.getHours()}`)
+    console.log(`Minutes: ${date1.getMinutes()}`)
+    console.log(`Seconds: ${date1.getSeconds()}`)
+
+
+
 
 
 
