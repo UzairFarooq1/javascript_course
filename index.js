@@ -915,6 +915,56 @@ class PersonaClass{
     console.log(`Seconds: ${date1.getSeconds()}`)
 
 
+    //closure 
+    function outerFunction(){
+        let counter=0
+        function innerFunction(){
+            counter++
+            return `Outer Function Value :${counter}`
+        }
+        return innerFunction
+    }
+    let myFunc=outerFunction()
+    console.log(myFunc())
+    console.log(myFunc())
+    console.log(myFunc());
+
+    function game() {
+        let score=0;
+
+        function increaseScore(points) {
+            score+=points
+            console.log(`current score is ${score}`);
+        }
+        
+        function decreaseScore(points) {
+            score-=points
+            console.log(`Current Score is ${score}`);
+        }
+
+        function getScore() {
+            console.log(`The current Score is ${score}`);
+        }
+
+        return {increaseScore, decreaseScore, getScore}
+    }
+
+    let myGame = game()
+
+    console.log(myGame.increaseScore(5));
+    console.log(myGame.increaseScore(10));
+    console.log(myGame.increaseScore(15));
+    console.log(myGame.decreaseScore(5));
+    console.log(myGame.decreaseScore(5));
+
+    console.log(myGame.getScore());
+
+
+
+
+
+
+
 
 
 
