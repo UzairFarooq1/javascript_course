@@ -960,13 +960,13 @@ class PersonaClass{
     console.log(myGame.getScore());
 
     //setTimeout function 
-    const timer = setTimeout(()=>{console.log("Hello from Timeout")},2000)
-    clearTimeout(timer)
+    const timer1 = setTimeout(()=>{console.log("Hello from Timeout")},2000)
+    clearTimeout(timer1)
 
 
 
     //Digital Clock 
-    let time = document.getElementById('clock')
+    //let time = document.getElementById('clock')
     let timeNow = new Date()
     timeNow.getHours();
     timeNow.getMinutes();
@@ -1006,10 +1006,56 @@ class PersonaClass{
             timeOfDay= 'AM'
         }
      
-       time.innerHTML = `${hours}:${minutes}:${seconds} ${timeOfDay}`;
+       //time.innerHTML = `${hours}:${minutes}:${seconds} ${timeOfDay}`;
        setTimeout(showTime, 1000);
     }
     showTime();
+
+    //StopWatch
+    let timer = document.getElementById('timer');
+    let startBtn = document.getElementById('startBtn')
+    let stopBtn = document.getElementById('stopBtn')
+    let resetBtn = document.getElementById('resetBtn')
+    let isRunning = false; 
+    let tInterval;
+    let totalSeconds = 0 ;
+    let hours;
+    let minutes;
+    let milisec = 0;
+
+    function startTimer(){
+        isRunning = true;
+        tInterval = setInterval(() => {
+           milisec++  
+           hours = Math.floor(milisec/(3600*60));
+           minutes = Math.floor(milisec/3600 )
+           minutes = minutes % 60;
+           seconds = Math.floor(milisec / 60 )
+           seconds = seconds % 60;
+           miliseconds = milisec % 60;
+           hours = hours < 10 ?  "0" + hours : hours;
+           minutes = minutes < 10 ? "0"+ minutes : minutes;
+           seconds = seconds < 10 ? "0" + seconds: seconds;
+           timer.textContent = `${hours}:${minutes}:${seconds}:${Math.floor(miliseconds)}`;
+        },10)
+        startBtn.disabled = true
+        stopBtn.disabled = false
+        resetBtn.disabled = false
+    }
+
+    function stopTimer() {
+        isRunning = false
+        clearInterval(tInterval)
+        startBtn.disabled = false
+        stopBtn.disabled = true
+    }
+    
+    function resetTimer() {
+        milisec = 0
+        timer.textContent = "00:00:00:00"
+        stopTimer()
+        startBtn.disabled = false
+    }
         
 
 
