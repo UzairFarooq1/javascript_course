@@ -474,7 +474,7 @@ const password = randomPasswordGenerator(
 console.log(password);
 
 
-document.getElementById("randPassword").innerHTML = `Generated Password is: ${password}`
+// document.getElementById("randPassword").innerHTML = `Generated Password is: ${password}`
 
 
 ///callback function = A function passed as an argument to another function.
@@ -959,9 +959,12 @@ class PersonaClass{
 
     console.log(myGame.getScore());
 
+    //setTimeout function 
+    const timer = setTimeout(()=>{console.log("Hello from Timeout")},2000)
+    clearTimeout(timer)
 
 
-
+    
 
 
 
