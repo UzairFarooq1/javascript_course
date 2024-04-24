@@ -964,7 +964,55 @@ class PersonaClass{
     clearTimeout(timer)
 
 
+
+    //Digital Clock 
+    let time = document.getElementById('clock')
+    let timeNow = new Date()
+    timeNow.getHours();
+    timeNow.getMinutes();
+    timeNow.getSeconds();
     
+    function showTime(){
+        let now = new Date()
+        let hours = now.getHours()
+        let minutes = now.getMinutes()
+        let seconds = now.getSeconds()
+
+        if (hours < 10){
+            hours = "0" + hours;
+        }
+        
+        if(minutes <  10){
+           minutes = "0"+ minutes;
+       }  
+        else{
+           minutes = minutes;
+       }
+        if(seconds <  10){
+            seconds = "0"+ seconds;
+        }  
+        else{
+            seconds = seconds;
+        }
+        let timeOfDay = 'AM';
+
+        if(hours >= 12){
+            timeOfDay = 'PM'
+            hours = hours - 12
+        }
+        if(hours == 0) {
+            hours = 12
+            timeOfDay= 'AM'
+        }
+     
+       time.innerHTML = `${hours}:${minutes}:${seconds} ${timeOfDay}`;
+       setTimeout(showTime, 1000);
+    }
+    showTime();
+        
+
+
+
 
 
 
