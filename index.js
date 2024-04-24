@@ -974,26 +974,27 @@ class PersonaClass{
     
     function showTime(){
         let now = new Date()
-        let hours = now.getHours()
-        let minutes = now.getMinutes()
-        let seconds = now.getSeconds()
+        let hours = now.getHours().toString().padStart(2,0)
+        let minutes = now.getMinutes().toString().padStart(2,0)
+        let seconds = now.getSeconds().toString().padStart(2,0)
 
-        if (hours < 10){
-            hours = "0" + hours;
-        }
+    //     if (hours < 10){
+    //         hours = "0" + hours;
+    //     }
         
-        if(minutes <  10){
-           minutes = "0"+ minutes;
-       }  
-        else{
-           minutes = minutes;
-       }
-        if(seconds <  10){
-            seconds = "0"+ seconds;
-        }  
-        else{
-            seconds = seconds;
-        }
+    //     if(minutes <  10){
+    //        minutes = "0"+ minutes;
+    //    }  
+    //     else{
+    //        minutes = minutes;
+    //    }
+    //     if(seconds <  10){
+    //         seconds = "0"+ seconds;
+    //     }  
+    //     else{
+    //         seconds = seconds;
+    //     }
+
         let timeOfDay = 'AM';
 
         if(hours >= 12){

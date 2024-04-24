@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-button{
+/* button{
     background-color:cadetblue;
     font-size: 1.5rem;
     color: black;
@@ -20,7 +20,7 @@ button{
         background-color: turquoise;
       }
 
-}
+} */
 
 .ifStatement{
     margin-top: 200px;
@@ -64,7 +64,56 @@ body{
     
 }
 
+#stopWatchContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 10px;
+    max-width: 100%;
+    animation: appear .5s ease-in forwards;
 
-#digitalClockCanvas{
+}
+#timerDisplay{
+    width: 50%;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+    border: 2px  solid black;
+    border-radius: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 1rem;
+}
 
+#startBtn{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-out;
+}
+#stopBtn{
+    background-color: rgb(250, 58, 58);
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-out;
+}
+
+#resetBtn{
+    background-color: rgb(50, 146, 255);
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-out;
 }
