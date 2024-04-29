@@ -1056,6 +1056,48 @@ class PersonaClass{
         stopTimer()
         startBtn.disabled = false
     }
+
+
+
+    //asynchronous functions: 
+
+    async function showTimeUntilDate() {
+       const targetDate = new Date("April 30, 2024");
+       let currentDate = new Date();
+       let timeDiff = targetDate.getTime() - currentDate.getTime();
+       if (timeDiff <= 0) {
+          alert('The countdown has finished!')
+       } else {
+         await displayCountDown(timeDiff);
+       }
+   }
+
+   function displayCountDown(time){
+      let days, hours, minutes, seconds ;
+      [days, hours, minutes, seconds] = convertToHMS(time);
+      document.getElementById("countdowndays").textContent=days;
+      document.getElementById("countdownhours").textContent=addZero(hours);
+      document.getElementById("countdownminutes").textContent=addZero(minutes);
+      document.getElementById("countdownseconds").textContent=addZero(Math.floor(seconds));
+      setTimeout(() => {showTimeUntilDate()}, 10)
+   }
+
+   function addZero(n) {
+      return ("00" + n).slice(-2);
+   }
+
+   function convertToHMS(ms) {  
+      days = Math.floor(ms / (3600 * 24));
+      ms %= 3600 * 24;  
+      hours = Math.floor(ms / 3600);
+      min_sec = ms % 3600;
+      minutes = Math.floor(min_sec / 60);
+      seconds = Math.floor(min_sec % 60);
+      return [days, hours, minutes, seconds];
+   }
+
+
+
         
 
 

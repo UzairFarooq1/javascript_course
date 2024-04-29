@@ -114,12 +114,17 @@
     <h1>Stopwatch</h1>
     <br>
     <div id="timerDisplay">
-        <div id="timer">00:00:00:00 </div>
+        <div style="font-family: monospace;" id="timer">00:00:00:00 </div>
         <br>
     <button style="display: inline-block;" onclick="startTimer()" id="startBtn">Start</button>
     <button style="display: inline-block;" onclick="stopTimer()" id="stopBtn">Stop</button>
     <button style="display: inline-block;" onclick="resetTimer()" id="resetBtn">Reset</button>
+    <button style="display: inline-block;" onclick="showTimeUntilDate()" id="timerBtn">StartTimer</button>
     </div>
+    <div id="countdowndays"></div>
+    <div id="countdownhours"></div>
+    <div id="countdownminutes"></div>
+    <div id="countdownseconds"></div>
 </div>
     <script src="index.js"></script>
 
