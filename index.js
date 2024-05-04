@@ -1119,6 +1119,8 @@ finally{
 }
 console.log("You have reached end of code");
 
+//throw new Error("Values must be a number") 
+
 
         
 
