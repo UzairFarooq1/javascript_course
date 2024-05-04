@@ -1097,6 +1097,28 @@ class PersonaClass{
    }
 
 
+//    Error Handling
+
+try {
+    console.log(x);
+    //Network error
+    //promise rejection
+    //security errors
+    
+} catch (error) {
+    console.err(error);
+    
+}
+
+//finally block
+finally{
+    //close files
+    //close connections
+    //release resources
+    console.log("This code always executes regardless of th errors");
+}
+console.log("You have reached end of code");
+
 
         
 
