@@ -1011,6 +1011,51 @@ class PersonaClass{
     }
     showTime();
 
+
+
+//FOR EACH LOOP
+const todos= [
+    {
+        id:1,
+        name:"Buy milk",
+        done:false
+    },
+    {
+        id:2,
+        name:"Buy eggs",
+        done:true
+    },
+    {
+        id:3,
+        name:"Buy bread",
+        done:false
+    }
+]
+
+todos.forEach((todo) => console.log( todo.name ));
+
+
+
+
+//MAP - create a new array of just the names of the todos
+const todosNames = todos.map(function(todo){
+    return todo.name
+})
+console.log(todosNames);
+
+//filter - create a new array of todos that are completed
+const todosCompleted = todos.filter(function(todo){
+    return todo.done === true;    
+}).map(function(todo){
+    return todo.name
+})
+console.log(todosCompleted);
+
+
+
+
+
+
     //StopWatch
     let timer = document.getElementById('timer');
     let startBtn = document.getElementById('startBtn')
@@ -1107,7 +1152,6 @@ try {
     
 } catch (error) {
     console.err(error);
-    
 }
 
 //finally block
@@ -1115,9 +1159,10 @@ finally{
     //close files
     //close connections
     //release resources
-    console.log("This code always executes regardless of th errors");
+    console.log("This code always executes regardless of the errors");
 }
 console.log("You have reached end of code");
+
 
 //throw new Error("Values must be a number") 
 
@@ -1136,4 +1181,6 @@ console.log("You have reached end of code");
 
 
 //Promises are used when you want to do something asynchronously and then get the result of that operation once it's done
+
+
 
